@@ -1,0 +1,216 @@
+/// Import Global Colors
+@import './global_colors';
+@import './var_tints';
+
+// Color Palette
+$wf-primary:                      #01768b;
+$wf-secondary:                    #7f187f;
+$wf-tertiary:                     #ff960b;
+$wf-sale:                         #c91f24;
+$wf-shipping:                     #1d781d;
+$wf-background:                   #f6f4ee;
+$wf-backgroundTint:               #faf9f6;
+$wf-backgroundShade:              #efece2;
+$wf-primaryTint1:                 #84c6d1;
+$wf-primaryTint2:                 #c1e2e8;
+$wf-primaryTint3:                 #e6f3f5;
+
+$wf-primaryHover:                 darken($wf-primary, 8%);
+$wf-secondaryHover:               darken($wf-secondary, 10%);
+$wf-veil:                         rgba($global-black, .5);
+
+////
+/// Functional Variables - USE THESE
+////
+
+/// Tints
+$black-tint--1:                   $global-black-tint--1;
+$black-tint--2:                   $global-black-tint--2;
+$black-tint--3:                   $global-black-tint--3;
+$primary-tint--1:                 $wf-primaryTint1;
+$primary-tint--2:                 $wf-primaryTint2;
+$primary-tint--3:                 $wf-primaryTint3;
+
+/// Text Colors
+$text-color--base:                $global-black;
+$text-color--light:               $global-black-tint--1;
+$text-color--extralight:          $global-black-tint--3;
+$text-color--primary:             $wf-primary;
+$text-color--primary--hover:      $wf-primaryHover;
+$text-color--secondary:           $wf-secondary;
+$text-color--tertiary:            null;
+
+$text-color--success:             $wf-secondary;
+$text-color--error:               $global-error;
+$text-color--sale:                $wf-sale;
+$text-color--alert:               $wf-tertiary;
+$text-color--accent:              $wf-tertiary;
+$text-color--shipping:            $wf-shipping;
+$text-color--disabled:            $global-black-tint--2;
+
+$text-color--white:               $global-white;
+$text-color--black:               $global-black;
+
+/// Background Colors
+$bg-color--global-body:           $wf-background;
+$bg-color--global-body--tint:     $wf-backgroundTint;
+$bg-color--global-body--shade:    $wf-backgroundShade;
+$bg-color--primary:               $wf-primary;
+$bg-color--primary--hover:        $wf-primaryHover;
+$bg-color--secondary:             $wf-secondary;
+$bg-color--secondary--hover:      $wf-tertiary;
+$bg-color--tertiary:              $wf-primaryTint3;
+$bg-color--quaternary:            $wf-secondary;
+
+$bg-color--cool:                  $wf-backgroundTint;
+$bg-color--warm:                  $wf-backgroundTint;
+$bg-color--white:                 $global-white;
+$bg-color--lighter-grey:          $wf-background;
+$bg-color--light-grey:            $global-black-tint--3;
+$bg-color--light-medium-grey:     $global-black-tint--2;
+$bg-color--medium-grey:           $global-black-tint--1;
+$bg-color--dark-grey:             $global-black;
+$bg-color--black:                 $global-black;
+
+$bg-color--success:               $wf-secondary;
+$bg-color--error:                 $global-error;
+$bg-color--sale:                  $wf-sale;
+$bg-color--alert:                 $wf-tertiary;
+$bg-color--accent:                $wf-tertiary;
+$bg-color--shipping:              null;
+
+/// Border Colors
+$border-color--global-body:       $wf-background;
+$border-color--global-body--tint: $wf-backgroundTint;
+$border-color--base:              $global-black-tint--3;
+$border-color--primary:           $wf-primary;
+$border-color--secondary:         $wf-primaryTint3;
+$border-color--tertiary:          $global-black;
+$border-color--quaternary:        $wf-secondary;
+$border-color--black:             $global-black;
+
+$border-color--cool:              $wf-backgroundTint;
+$border-color--warm:              $wf-backgroundTint;
+$border-color--white:             $global-white;
+$border-color--lighter-grey:      $wf-background;
+$border-color--light-medium-grey: $global-black-tint--2;
+$border-color--medium-grey:       $global-black-tint--1;
+$border-color--dark-medium-grey:  $global-black-tint--2;
+
+$border-color--success:           $wf-secondary;
+$border-color--error:             $global-error;
+$border-color--sale:              $wf-sale;
+$border-color--alert:             $wf-tertiary;
+$border-color--accent:            $wf-tertiary;
+
+/// Box Shadow
+$boxShadow-color:                 $global-black-tint--1;
+
+$bg-color-shape--primary:         $wf-secondary;
+
+/// Buttons
+$bg-color-button--primary:        $wf-primary;
+$bg-color-button--primary--hover: $wf-primaryHover;
+
+$bg-color-button--secondary:        $wf-secondary;
+$bg-color-button--secondary--hover: $wf-secondaryHover;
+
+// Veils
+$veil-color--base: $wf-veil;
+
+:export {
+  ///Tints
+  black-tint-1: $black-tint--1;
+  black-tint--2: $black-tint--2;
+  black-tint--3: $black-tint--3;
+  primary-tint--1: $primary-tint--1;
+  primary-tint--2: $primary-tint--2;
+  primary-tint--3: $primary-tint--3;
+
+  ///TextColors
+  text-color--base: $text-color--base;
+  text-color--light: $text-color--light;
+  text-color--extralight: $text-color--extralight;
+  text-color--primary: $text-color--primary;
+  text-color--primary--hover: $text-color--primary--hover;
+  text-color--secondary: $text-color--secondary;
+  text-color--tertiary: $text-color--tertiary;
+
+  text-color--success: $text-color--success;
+  text-color--error: $text-color--error;
+  text-color--sale: $text-color--sale;
+  text-color--alert: $text-color--alert;
+  text-color--accent: $text-color--accent;
+  text-color--shipping: $text-color--shipping;
+  text-color--disabled: $text-color--disabled;
+
+  text-color--white: $text-color--white;
+  text-color--black: $text-color--black;
+
+  ///BackgroundColors
+  bg-color--global-body: $bg-color--global-body;
+  bg-color--global-body--tint: $bg-color--global-body--tint;
+  bg-color--global-body--shade: $bg-color--global-body--shade;
+  bg-color--lighter-grey: $bg-color--lighter-grey;
+  bg-color--primary: $bg-color--primary;
+  bg-color--primary--hover: $bg-color--primary--hover;
+  bg-color--secondary--hover: $bg-color--secondary--hover;
+  bg-color--secondary: $bg-color--secondary;
+  bg-color--tertiary: $bg-color--tertiary;
+  bg-color--quaternary: $bg-color--quaternary;
+
+  bg-color--cool: $bg-color--cool;
+  bg-color--warm: $bg-color--warm;
+  bg-color--white: $bg-color--white;
+  bg-color--light-grey: $bg-color--light-grey;
+  bg-color--light-medium-grey: $bg-color--light-medium-grey;
+  bg-color--medium-grey: $bg-color--medium-grey;
+  bg-color--dark-grey: $bg-color--dark-grey;
+  bg-color--black: $bg-color--black;
+
+  bg-color--success: $bg-color--success;
+  bg-color--error: $bg-color--error;
+  bg-color--sale: $bg-color--sale;
+  bg-color--alert: $bg-color--alert;
+  bg-color--accent: $bg-color--accent;
+  bg-color--shipping: $bg-color--shipping;
+
+  ///BorderColors
+  border-color--global-body: $border-color--global-body;
+  border-color--global-body--tint: $border-color--global-body--tint;
+  border-color--base: $border-color--base;
+  border-color--primary: $border-color--primary;
+  border-color--secondary: $border-color--secondary;
+  border-color--tertiary: $border-color--tertiary;
+  border-color--quaternary: $border-color--quaternary;
+  border-color--black: $border-color--black;
+
+  border-color--cool: $border-color--cool;
+  border-color--warm: $border-color--warm;
+  border-color--white: $border-color--white;
+  border-color--lighter-grey: $border-color--lighter-grey;
+  border-color--light-medium-grey: $border-color--light-medium-grey;
+  border-color--medium-grey: $border-color--medium-grey;
+  border-color--dark-medium-grey: $border-color--dark-medium-grey;
+
+  border-color--success: $border-color--success;
+  border-color--error: $border-color--error;
+  border-color--sale: $border-color--sale;
+  border-color--alert: $border-color--alert;
+  border-color--accent: $border-color--accent;
+
+  ///BoxShadow
+  boxShadow-color: $boxShadow-color;
+
+  bg-color-shape--primary: $bg-color-shape--primary;
+
+  ///Buttons
+  bg-color-button--primary: $bg-color-button--primary;
+  bg-color-button--primary--hover: $bg-color-button--primary--hover;
+
+  bg-color-button--secondary: $bg-color-button--secondary;
+  bg-color-button--secondary--hover: $bg-color-button--secondary--hover;
+
+  //Veils
+  veil-color--base: $veil-color--base;
+}
