@@ -122,98 +122,98 @@ $bg-color-button--secondary--hover: $bl-secondary;
 $veil-color--base:                $bl-veil;
 
 :export {
-  ///Tints
-  black-tint-1: $black-tint--1;
-  black-tint--2: $black-tint--2;
-  black-tint--3: $black-tint--3;
-  primary-tint--1: $primary-tint--1;
-  primary-tint--2: $primary-tint--2;
-  primary-tint--3: $primary-tint--3;
+  /// Tints
+  black-tint--1:                   '$global-black-', $global-black-tint--1;
+  black-tint--2:                   '$global-black-', $global-black-tint--2;
+  black-tint--3:                   '$global-black-', $global-black-tint--3;
+  primary-tint--1:                 '$bl-primaryTin', $bl-primaryTint1;
+  primary-tint--2:                 '$bl-primaryTin', $bl-primaryTint2;
+  primary-tint--3:                 '$bl-primaryTin', $bl-primaryTint3;
 
-  ///TextColors
-  text-color--base: $text-color--base;
-  text-color--light: $text-color--light;
-  text-color--extralight: $text-color--extralight;
-  text-color--primary: $text-color--primary;
-  text-color--primary--hover: $text-color--primary--hover;
-  text-color--secondary: $text-color--secondary;
-  text-color--tertiary: $text-color--tertiary;
+  /// Text Colors
+  text-color--base:                '$global-black', $global-black;
+  text-color--light:               '$black-tint--1', $black-tint--1;
+  text-color--extralight:          '$black-tint--3', $black-tint--3;
+  text-color--primary:             '$bl-primary', $bl-primary;
+  text-color--primary--hover:      'null', null;
+  text-color--secondary:           '$bl-secondary', $bl-secondary;
+  text-color--tertiary:            '$bl-primary', $bl-primary;
 
-  text-color--success: $text-color--success;
-  text-color--error: $text-color--error;
-  text-color--sale: $text-color--sale;
-  text-color--alert: $text-color--alert;
-  text-color--accent: $text-color--accent;
-  text-color--shipping: $text-color--shipping;
-  text-color--disabled: $text-color--disabled;
+  text-color--success:             '$bl-primary', $bl-primary;
+  text-color--error:               '$global-error', $global-error;
+  text-color--sale:                '$bl-sale', $bl-sale;
+  text-color--alert:               'null', null;
+  text-color--accent:              '$bl-tertiary', $bl-tertiary;
+  text-color--shipping:            '$bl-primary', $bl-primary;
+  text-color--disabled:            '$black-tint--2', $black-tint--2;
 
-  text-color--white: $text-color--white;
-  text-color--black: $text-color--black;
+  text-color--white:               '$global-white', $global-white;
+  text-color--black:               '$global-black', $global-black;
 
-  ///BackgroundColors
-  bg-color--global-body: $bg-color--global-body;
-  bg-color--global-body--tint: $bg-color--global-body--tint;
-  bg-color--global-body--shade: $bg-color--global-body--shade;
-  bg-color--lighter-grey: $bg-color--lighter-grey;
-  bg-color--primary: $bg-color--primary;
-  bg-color--primary--hover: $bg-color--primary--hover;
-  bg-color--secondary--hover: $bg-color--secondary--hover;
-  bg-color--secondary: $bg-color--secondary;
-  bg-color--tertiary: $bg-color--tertiary;
-  bg-color--quaternary: $bg-color--quaternary;
+  /// Background Colors
+  bg-color--global-body:           '$bl-background', $bl-background;
+  bg-color--global-body--tint:     '$bl-background', $bl-backgroundTint;
+  bg-color--global-body--shade:    '$bl-background', $bl-backgroundShade;
+  bg-color--primary:               '$bl-primary', $bl-primary;
+  bg-color--primary--hover:        '$bl-primary', $bl-primary;
+  bg-color--secondary:             '$bl-secondary', $bl-secondary;
+  bg-color--secondary--hover:      'null', null;
+  bg-color--tertiary:              '$global-black', $global-black;
+  bg-color--quaternary:            '$bl-background', $bl-background;
 
-  bg-color--cool: $bg-color--cool;
-  bg-color--warm: $bg-color--warm;
-  bg-color--white: $bg-color--white;
-  bg-color--light-grey: $bg-color--light-grey;
-  bg-color--light-medium-grey: $bg-color--light-medium-grey;
-  bg-color--medium-grey: $bg-color--medium-grey;
-  bg-color--dark-grey: $bg-color--dark-grey;
-  bg-color--black: $bg-color--black;
+  bg-color--cool:                  '$black-tint--3', $black-tint--3;
+  bg-color--warm:                  '$bl-background', $bl-backgroundTint;
+  bg-color--white:                 '$global-white', $global-white;
+  bg-color--lighter-grey:          '$bl-background', $bl-backgroundTint;
+  bg-color--light-grey:            '$black-tint--3', $black-tint--3;
+  bg-color--light-medium-grey:     '$black-tint--2', $black-tint--2;
+  bg-color--medium-grey:           '$black-tint--1', $black-tint--1;
+  bg-color--dark-grey:             '$global-black', $global-black;
+  bg-color--black:                 '$global-black', $global-black;
 
-  bg-color--success: $bg-color--success;
-  bg-color--error: $bg-color--error;
-  bg-color--sale: $bg-color--sale;
-  bg-color--alert: $bg-color--alert;
-  bg-color--accent: $bg-color--accent;
-  bg-color--shipping: $bg-color--shipping;
+  bg-color--success:               '$bl-primary', $bl-primary;
+  bg-color--error:                 '$global-error', $global-error;
+  bg-color--sale:                  '$bl-sale', $bl-sale;
+  bg-color--alert:                 'null', null;
+  bg-color--accent:                '$bl-tertiary', $bl-tertiary;
+  bg-color--shipping:              'null', null;
 
-  ///BorderColors
-  border-color--global-body: $border-color--global-body;
-  border-color--global-body--tint: $border-color--global-body--tint;
-  border-color--base: $border-color--base;
-  border-color--primary: $border-color--primary;
-  border-color--secondary: $border-color--secondary;
-  border-color--tertiary: $border-color--tertiary;
-  border-color--quaternary: $border-color--quaternary;
-  border-color--black: $border-color--black;
+  /// Border Colors
+  border-color--global-body:       '$bl-background', $bl-background;
+  border-color--global-body--tint: '$bl-backgroundTint', $bl-backgroundTint;
+  border-color--base:              '$black-tint--3', $black-tint--3;
+  border-color--primary:           '$bl-primary', $bl-primary;
+  border-color--secondary:         '$bl-secondary', $bl-secondary;
+  border-color--tertiary:          '$bl-primary', $bl-primary;
+  border-color--quaternary:        'null', null;
+  border-color--black:             '$global-black', $global-black;
 
-  border-color--cool: $border-color--cool;
-  border-color--warm: $border-color--warm;
-  border-color--white: $border-color--white;
-  border-color--lighter-grey: $border-color--lighter-grey;
-  border-color--light-medium-grey: $border-color--light-medium-grey;
-  border-color--medium-grey: $border-color--medium-grey;
-  border-color--dark-medium-grey: $border-color--dark-medium-grey;
+  border-color--cool:              '$black-tint--3', $black-tint--3;
+  border-color--warm:              '$bl-backgroundTint', $bl-backgroundTint;
+  border-color--white:             '$global-white', $global-white;
+  border-color--lighter-grey:      '$bl-backgroundTint', $bl-backgroundTint;
+  border-color--light-medium-grey: '$black-tint--2', $black-tint--2;
+  border-color--medium-grey:       '$black-tint--1', $black-tint--1;
+  border-color--dark-medium-grey:  '$black-tint--2', $black-tint--2;
 
-  border-color--success: $border-color--success;
-  border-color--error: $border-color--error;
-  border-color--sale: $border-color--sale;
-  border-color--alert: $border-color--alert;
-  border-color--accent: $border-color--accent;
+  border-color--success:           '$bl-primary', $bl-primary;
+  border-color--error:             '$global-error', $global-error;
+  border-color--alert:             'null', null;
+  border-color--accent:            '$bl-tertiary', $bl-tertiary;
+  border-color--sale:              '$bl-sale', $bl-sale;
 
-  ///BoxShadow
-  boxShadow-color: $boxShadow-color;
+  /// Box Shadow
+  boxShadow-color:                 '$black-tint--1', $black-tint--1;
 
-  bg-color-shape--primary: $bg-color-shape--primary;
+  bg-color-shape--primary:         '$bl-primary', $bl-primary;
 
-  ///Buttons
-  bg-color-button--primary: $bg-color-button--primary;
-  bg-color-button--primary--hover: $bg-color-button--primary--hover;
+  /// Buttons
+  bg-color-button--primary:        '$bl-primary', $bl-primary;
+  bg-color-button--primary--hover: '$bl-secondary', $bl-secondary;
 
-  bg-color-button--secondary: $bg-color-button--secondary;
-  bg-color-button--secondary--hover: $bg-color-button--secondary--hover;
+  bg-color-button--secondary:      '$bl-primary', $bl-primary;
+  bg-color-button--secondary--hover: '$bl-secondary', $bl-secondary;
 
-  //Veils
-  veil-color--base: $veil-color--base;
+  // Veils
+  veil-color--base:                '$bl-veil', $bl-veil;
 }

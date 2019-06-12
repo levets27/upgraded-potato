@@ -4,36 +4,98 @@ import "./App.css";
 
 function App() {
   const brands = ["wf", "am", "bl", "jm", "pg"];
+  const getBrandName = brand => {
+    switch (brand) {
+      case "wf":
+        return "Wayfair";
+      case "am":
+        return "AllModern";
+      case "bl":
+        return "Birch Lane";
+      case "jm":
+        return "Joss & Main";
+      case "pg":
+        return "Perigold";
+      default:
+        return "Wayfair";
+    }
+  };
   const Wrapper = styled.div`
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+  `;
+  const Column = styled.div`
+    display: grid;
+    grid-gap: 10px;
+  `;
+  const Heading = styled.h2`
+    text-align: center;
+    font-size: 1.5rem;
+    height: 50px;
+    padding-top: 10px;
+  `;
+  const RowLabel = styled.h3`
     display: flex;
-    flex-wrap: wrap;
+    height: 100px;
+    span {
+      margin: auto;
+      text-align: center;
+    }
   `;
   const ColorBlock = styled.div`
-    margin: 5px;
-    max-width: 100px;
-    height: 100px;
-    display: flex;
+    position: relative;
     border: 1px solid darkgray;
     border-radius: 5px;
-    span {
+    height: 100px;
+    p {
       font-size: 0.75rem;
-      margin: auto;
+      padding: 5px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
       color: white;
       background: rgba(0, 0, 0, 0.7);
+      text-align: center;
     }
   `;
   return (
     <Wrapper>
-      {brands.map(brand => {
-        const variables = require(`./scss/_${brand}.scss`);
-        console.log(variables);
-        return Object.entries(variables).map((color, i) => (
-          <ColorBlock key={i} style={{ background: color[1], color: "white" }}>
-            <span>
-              {color[0]}: {color[1]}
-            </span>
-          </ColorBlock>
-        ));
+      {brands.map((brand, i) => {
+        let variables = Object.entries(require(`./scss/_${brand}.scss`));
+        // Wrap each element in a column
+        return (
+          <>
+            {i === 0 && (
+              <Column key={i}>
+                <Heading>Var Name</Heading>
+                {variables.map((color, i) => (
+                  <RowLabel key={i}>
+                    <span>${color[0]}</span>
+                  </RowLabel>
+                ))}
+              </Column>
+            )}
+            <Column key={i}>
+              <Heading>{getBrandName(brand)}</Heading>
+              {variables.map((color, i) => {
+                let array = color[1].split(", ", 2);
+                return (
+                  <ColorBlock
+                    key={i}
+                    style={{ background: array[1], color: "white" }}
+                  >
+                    <p>
+                      {array[0].replace(/"/g, "").replace(/'/g, "")}
+                      <br />
+                      {array[1]}
+                    </p>
+                  </ColorBlock>
+                );
+              })}
+            </Column>
+          </>
+        );
       })}
     </Wrapper>
   );
