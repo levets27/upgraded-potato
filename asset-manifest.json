@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/upgraded-potato/static/css/main.81d97dca.chunk.css",
-    "main.js": "/upgraded-potato/static/js/main.fadd6193.chunk.js",
-    "main.js.map": "/upgraded-potato/static/js/main.fadd6193.chunk.js.map",
+    "main.js": "/upgraded-potato/static/js/main.474ad138.chunk.js",
+    "main.js.map": "/upgraded-potato/static/js/main.474ad138.chunk.js.map",
     "runtime~main.js": "/upgraded-potato/static/js/runtime~main.6aa2da0d.js",
     "runtime~main.js.map": "/upgraded-potato/static/js/runtime~main.6aa2da0d.js.map",
     "static/js/2.83d0676a.chunk.js": "/upgraded-potato/static/js/2.83d0676a.chunk.js",
     "static/js/2.83d0676a.chunk.js.map": "/upgraded-potato/static/js/2.83d0676a.chunk.js.map",
     "index.html": "/upgraded-potato/index.html",
-    "precache-manifest.30ffe55e3056a40e8c50b0af50dd199d.js": "/upgraded-potato/precache-manifest.30ffe55e3056a40e8c50b0af50dd199d.js",
+    "precache-manifest.3d62c1b09278954d01b9a24e16c6abb8.js": "/upgraded-potato/precache-manifest.3d62c1b09278954d01b9a24e16c6abb8.js",
     "service-worker.js": "/upgraded-potato/service-worker.js",
     "static/css/main.81d97dca.chunk.css.map": "/upgraded-potato/static/css/main.81d97dca.chunk.css.map"
   }
