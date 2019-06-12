@@ -30,10 +30,16 @@ function App() {
     grid-gap: 10px;
   `;
   const Heading = styled.h2`
+    position: sticky;
+    top: 0;
     text-align: center;
     font-size: 1.5rem;
     height: 50px;
     padding-top: 10px;
+    background: #fff;
+    z-index: 1;
+    border-bottom: 2px solid #000;
+    margin: 0 -5px;
   `;
   const RowLabel = styled.h3`
     display: flex;
