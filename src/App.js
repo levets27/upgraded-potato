@@ -78,22 +78,6 @@ const Wrapper = styled.div`
 `;
 
 const brands = ["wf", "am", "bl", "jm", "pg"];
-const getBrandName = brand => {
-  switch (brand) {
-    case "wf":
-      return "BL";
-    case "am":
-      return "AM";
-    case "bl":
-      return "BL";
-    case "jm":
-      return "JM";
-    case "pg":
-      return "PG";
-    default:
-      return "WF";
-  }
-};
 // Credit David Walsh (https://davidwalsh.name/javascript-debounce-function)
 
 // Returns a function, that, as long as it continues to be invoked, will not
@@ -158,7 +142,7 @@ const ColorGrid = props => {
                   <FilterBlock query={query} filter={filter} />
                   {colors[brand].map((color, i) => (
                     <Fragment key={i}>
-                      {color[0].includes(query) && (
+                      {color[0].toLowerCase().includes(query.toLowerCase()) && (
                         <RowLabel>
                           <span>${color[0]}</span>
                         </RowLabel>
@@ -173,7 +157,7 @@ const ColorGrid = props => {
                   let array = color[1].split(", ", 2);
                   return (
                     <Fragment key={i}>
-                      {color[0].includes(query) && (
+                      {color[0].toLowerCase().includes(query.toLowerCase()) && (
                         <ColorBlock
                           style={{ background: array[1], color: "white" }}
                         >
