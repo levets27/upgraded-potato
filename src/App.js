@@ -148,7 +148,7 @@ const ColorGrid = props => {
               <Column key={i}>
                 <Heading>{brand.toUpperCase()}</Heading>
                 {colors[brand].map((color, i) => {
-                  let array = color[1].split(", ", 2);
+                  let array = color[1].split("_", 2);
                   return (
                     <Fragment key={i}>
                       {color[0].toLowerCase().includes(query.toLowerCase()) && (

@@ -15,8 +15,8 @@ $pg-primaryTint1:                 #7f7f7f;
 $pg-primaryTint2:                 #bfbfbf;
 $pg-primaryTint3:                 #ebebeb;
 
-$pg-veil:                         rgba($global-black, .5);
-$pg-boxShadow:                    rgba($global-black, .3);
+$pg-veil:                         rgba(34, 25, 36, .5); // rgba($global-black, .5);
+$pg-boxShadow:                    rgba(34, 25, 36, .3); // rgba($global-black, .3);
 
 $pg-brownHover:                   #393739;
 $pg-brownAccentHover:             #5f4c47;
@@ -124,97 +124,97 @@ $veil-color--base:                $pg-veil;
 
 :export {
   /// Tints
-  black-tint--1:                   '$global-black-tint--1', $global-black-tint--1;
-  black-tint--2:                   '$global-black-tint--2', $global-black-tint--2;
-  black-tint--3:                   '$global-black-tint--3', $global-black-tint--3;
-  primary-tint--1:                 '$pg-primaryTint1', $pg-primaryTint1;
-  primary-tint--2:                 '$pg-primaryTint2', $pg-primaryTint2;
-  primary-tint--3:                 '$pg-primaryTint3', $pg-primaryTint3;
+  black-tint--1:                   '$global-black-tint--1'_$global-black-tint--1;
+  black-tint--2:                   '$global-black-tint--2'_$global-black-tint--2;
+  black-tint--3:                   '$global-black-tint--3'_$global-black-tint--3;
+  primary-tint--1:                 '$pg-primaryTint1'_$pg-primaryTint1;
+  primary-tint--2:                 '$pg-primaryTint2'_$pg-primaryTint2;
+  primary-tint--3:                 '$pg-primaryTint3'_$pg-primaryTint3;
 
   // Text Colors
-  text-color--base:                '$pg-primary', $pg-primary;
-  text-color--light:               '$global-black-tint--1', $global-black-tint--1;
-  text-color--extralight:          '$global-black-tint--3', $global-black-tint--3;
-  text-color--primary:             '$pg-primary', $pg-primary;
-  text-color--primary--hover:      '$pg-brownHover', $pg-brownHover;
-  text-color--secondary:           '$pg-secondary', $pg-secondary;
-  text-color--tertiary:            '$pg-brownAccentHover', $pg-brownAccentHover;
+  text-color--base:                '$pg-primary'_$pg-primary;
+  text-color--light:               '$global-black-tint--1'_$global-black-tint--1;
+  text-color--extralight:          '$global-black-tint--3'_$global-black-tint--3;
+  text-color--primary:             '$pg-primary'_$pg-primary;
+  text-color--primary--hover:      '$pg-brownHover'_$pg-brownHover;
+  text-color--secondary:           '$pg-secondary'_$pg-secondary;
+  text-color--tertiary:            '$pg-brownAccentHover'_$pg-brownAccentHover;
 
-  text-color--success:             'null', null;
-  text-color--error:               '$global-error', $global-error;
-  text-color--sale:                '$pg-sale', $pg-sale;
-  text-color--alert:               '$pg-orangeSlice', $pg-orangeSlice;
-  text-color--accent:              '$pg-orangeCrush', $pg-orangeCrush;
-  text-color--shipping:            '$pg-shipping', $pg-shipping;
-  text-color--disabled:            '$global-black-tint--3', $global-black-tint--3;
+  text-color--success:             'null'_null;
+  text-color--error:               '$global-error'_$global-error;
+  text-color--sale:                '$pg-sale'_$pg-sale;
+  text-color--alert:               '$pg-orangeSlice'_$pg-orangeSlice;
+  text-color--accent:              '$pg-orangeCrush'_$pg-orangeCrush;
+  text-color--shipping:            '$pg-shipping'_$pg-shipping;
+  text-color--disabled:            '$global-black-tint--3'_$global-black-tint--3;
 
-  text-color--white:               '$global-white', $global-white;
-  text-color--black:               '$global-black', $global-black;
+  text-color--white:               '$global-white'_$global-white;
+  text-color--black:               '$global-black'_$global-black;
 
   // Background Colors
-  bg-color--global-body:           '$pg-background', $pg-background;
-  bg-color--global-body--tint:     '$pg-backgroundTint', $pg-backgroundTint;
-  bg-color--global-body--shade:    '$pg-backgroundShade', $pg-backgroundShade;
-  bg-color--primary:               '$pg-primary', $pg-primary;
-  bg-color--primary--hover:        '$pg-brownHover', $pg-brownHover;
-  bg-color--secondary:             '$pg-secondary', $pg-secondary;
-  bg-color--secondary--hover:      '$pg-brownAccentHover', $pg-brownAccentHover;
-  bg-color--tertiary:              '$global-black-tint--3', $global-black-tint--3;
-  bg-color--quaternary:            'null', null;
+  bg-color--global-body:           '$pg-background'_$pg-background;
+  bg-color--global-body--tint:     '$pg-backgroundTint'_$pg-backgroundTint;
+  bg-color--global-body--shade:    '$pg-backgroundShade'_$pg-backgroundShade;
+  bg-color--primary:               '$pg-primary'_$pg-primary;
+  bg-color--primary--hover:        '$pg-brownHover'_$pg-brownHover;
+  bg-color--secondary:             '$pg-secondary'_$pg-secondary;
+  bg-color--secondary--hover:      '$pg-brownAccentHover'_$pg-brownAccentHover;
+  bg-color--tertiary:              '$global-black-tint--3'_$global-black-tint--3;
+  bg-color--quaternary:            'null'_null;
 
-  bg-color--cool:                  '$pg-backgroundTint', $pg-backgroundTint;
-  bg-color--warm:                  'null', null;
-  bg-color--white:                 '$global-white', $global-white;
-  bg-color--lighter-grey:          '$pg-background', $pg-background;
-  bg-color--light-grey:            '$global-black-tint--3', $global-black-tint--3;
-  bg-color--light-medium-grey:     '$global-black-tint--3', $global-black-tint--3;
-  bg-color--medium-grey:           '$global-black-tint--1', $global-black-tint--1;
-  bg-color--dark-grey:             '$pg-primary', $pg-primary;
-  bg-color--black:                 '$global-black', $global-black;
+  bg-color--cool:                  '$pg-backgroundTint'_$pg-backgroundTint;
+  bg-color--warm:                  'null'_null;
+  bg-color--white:                 '$global-white'_$global-white;
+  bg-color--lighter-grey:          '$pg-background'_$pg-background;
+  bg-color--light-grey:            '$global-black-tint--3'_$global-black-tint--3;
+  bg-color--light-medium-grey:     '$global-black-tint--3'_$global-black-tint--3;
+  bg-color--medium-grey:           '$global-black-tint--1'_$global-black-tint--1;
+  bg-color--dark-grey:             '$pg-primary'_$pg-primary;
+  bg-color--black:                 '$global-black'_$global-black;
 
-  bg-color--success:               '$pg-primary', $pg-primary;
-  bg-color--error:                 '$global-error', $global-error;
-  bg-color--sale:                  '$pg-sale', $pg-sale;
-  bg-color--alert:                 '$pg-orangeSlice', $pg-orangeSlice;
-  bg-color--accent:                '$pg-orangeCrush', $pg-orangeCrush;
-  bg-color--shipping:              'null', null;
+  bg-color--success:               '$pg-primary'_$pg-primary;
+  bg-color--error:                 '$global-error'_$global-error;
+  bg-color--sale:                  '$pg-sale'_$pg-sale;
+  bg-color--alert:                 '$pg-orangeSlice'_$pg-orangeSlice;
+  bg-color--accent:                '$pg-orangeCrush'_$pg-orangeCrush;
+  bg-color--shipping:              'null'_null;
 
   // Border Colors
-  border-color--global-body:       '$pg-background', $pg-background;
-  border-color--global-body--tint: '$pg-backgroundTint', $pg-backgroundTint;
-  border-color--base:              '$global-black-tint--3', $global-black-tint--3;
-  border-color--primary:           '$pg-primary', $pg-primary;
-  border-color--secondary:         '$pg-background', $pg-background;
-  border-color--tertiary:          '$pg-tertiary', $pg-tertiary;
-  border-color--quaternary:        '$pg-brownHover', $pg-brownHover;
-  border-color--black:             '$global-black', $global-black;
+  border-color--global-body:       '$pg-background'_$pg-background;
+  border-color--global-body--tint: '$pg-backgroundTint'_$pg-backgroundTint;
+  border-color--base:              '$global-black-tint--3'_$global-black-tint--3;
+  border-color--primary:           '$pg-primary'_$pg-primary;
+  border-color--secondary:         '$pg-background'_$pg-background;
+  border-color--tertiary:          '$pg-tertiary'_$pg-tertiary;
+  border-color--quaternary:        '$pg-brownHover'_$pg-brownHover;
+  border-color--black:             '$global-black'_$global-black;
 
-  border-color--cool:              '$pg-backgroundTint', $pg-backgroundTint;
-  border-color--warm:              '$global-white', $global-white;
-  border-color--white:             '$global-white', $global-white;
-  border-color--lighter-grey:      '$pg-background', $pg-background;
-  border-color--light-medium-grey: '$global-black-tint--3', $global-black-tint--3;
-  border-color--medium-grey:       '$global-black-tint--1', $global-black-tint--1;
-  border-color--dark-medium-grey:  '$global-black-tint--2', $global-black-tint--2;
+  border-color--cool:              '$pg-backgroundTint'_$pg-backgroundTint;
+  border-color--warm:              '$global-white'_$global-white;
+  border-color--white:             '$global-white'_$global-white;
+  border-color--lighter-grey:      '$pg-background'_$pg-background;
+  border-color--light-medium-grey: '$global-black-tint--3'_$global-black-tint--3;
+  border-color--medium-grey:       '$global-black-tint--1'_$global-black-tint--1;
+  border-color--dark-medium-grey:  '$global-black-tint--2'_$global-black-tint--2;
 
-  border-color--success:           '$pg-primary', $pg-primary;
-  border-color--error:             '$global-error', $global-error;
-  border-color--sale:              '$pg-sale', $pg-sale;
-  border-color--alert:             '$pg-orangeSlice', $pg-orangeSlice;
-  border-color--accent:            '$pg-orangeCrush', $pg-orangeCrush;
+  border-color--success:           '$pg-primary'_$pg-primary;
+  border-color--error:             '$global-error'_$global-error;
+  border-color--sale:              '$pg-sale'_$pg-sale;
+  border-color--alert:             '$pg-orangeSlice'_$pg-orangeSlice;
+  border-color--accent:            '$pg-orangeCrush'_$pg-orangeCrush;
 
   // Box Shadow
-  boxShadow-color:                 '$pg-boxShadow', $pg-boxShadow;
+  boxShadow-color:                 '$pg-boxShadow'_$pg-boxShadow;
 
-  bg-color-shape--primary:         '$pg-primary', $pg-primary;
+  bg-color-shape--primary:         '$pg-primary'_$pg-primary;
 
   // Buttons
-  bg-color-button--primary:        '$pg-primary', $pg-primary;
-  bg-color-button--primary--hover: '$pg-brownHover', $pg-brownHover;
+  bg-color-button--primary:        '$pg-primary'_$pg-primary;
+  bg-color-button--primary--hover: '$pg-brownHover'_$pg-brownHover;
 
-  bg-color-button--secondary:        '$pg-secondary', $pg-secondary;
-  bg-color-button--secondary--hover: '$pg-brownAccentHover', $pg-brownAccentHover;
+  bg-color-button--secondary:        '$pg-secondary'_$pg-secondary;
+  bg-color-button--secondary--hover: '$pg-brownAccentHover'_$pg-brownAccentHover;
 
   // Veils
-  veil-color--base:                '$pg-veil', $pg-veil;
+  veil-color--base:                '$pg-veil'_$pg-veil;
 }

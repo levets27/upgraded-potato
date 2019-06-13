@@ -15,9 +15,9 @@ $wf-primaryTint1:                 #84c6d1;
 $wf-primaryTint2:                 #c1e2e8;
 $wf-primaryTint3:                 #e6f3f5;
 
-$wf-primaryHover:                 darken($wf-primary, 8%);
-$wf-secondaryHover:               darken($wf-secondary, 10%);
-$wf-veil:                         rgba($global-black, .5);
+$wf-primaryHover:                 #015462; // darken($wf-primary, 8%);
+$wf-secondaryHover:               #541054; // darken($wf-secondary, 10%);
+$wf-veil:                         rgba(34, 25, 36, .5); // rgba($global-black, .5);
 
 ////
 /// Functional Variables - USE THESE
@@ -120,97 +120,97 @@ $veil-color--base: $wf-veil;
 
 :export {
   /// Tints
-  black-tint--1:                   '$global-black-tint--1', $global-black-tint--1;
-  black-tint--2:                   '$global-black-tint--2', $global-black-tint--2;
-  black-tint--3:                   '$global-black-tint--3', $global-black-tint--3;
-  primary-tint--1:                 '$wf-primaryTint1', $wf-primaryTint1;
-  primary-tint--2:                 '$wf-primaryTint2', $wf-primaryTint2;
-  primary-tint--3:                 '$wf-primaryTint3', $wf-primaryTint3;
+  black-tint--1:                   '$global-black-tint--1'_$global-black-tint--1;
+  black-tint--2:                   '$global-black-tint--2'_$global-black-tint--2;
+  black-tint--3:                   '$global-black-tint--3'_$global-black-tint--3;
+  primary-tint--1:                 '$wf-primaryTint1'_$wf-primaryTint1;
+  primary-tint--2:                 '$wf-primaryTint2'_$wf-primaryTint2;
+  primary-tint--3:                 '$wf-primaryTint3'_$wf-primaryTint3;
 
   /// Text Colors
-  text-color--base:                '$global-black', $global-black;
-  text-color--light:               '$global-black-tint--1', $global-black-tint--1;
-  text-color--extralight:          '$global-black-tint--3', $global-black-tint--3;
-  text-color--primary:             '$wf-primary', $wf-primary;
-  text-color--primary--hover:      '$wf-primaryHover', $wf-primaryHover;
-  text-color--secondary:           '$wf-secondary', $wf-secondary;
-  text-color--tertiary:            'null', null;
+  text-color--base:                '$global-black'_$global-black;
+  text-color--light:               '$global-black-tint--1'_$global-black-tint--1;
+  text-color--extralight:          '$global-black-tint--3'_$global-black-tint--3;
+  text-color--primary:             '$wf-primary'_$wf-primary;
+  text-color--primary--hover:      '$wf-primaryHover'_$wf-primaryHover;
+  text-color--secondary:           '$wf-secondary'_$wf-secondary;
+  text-color--tertiary:            'null'_null;
 
-  text-color--success:             '$wf-secondary', $wf-secondary;
-  text-color--error:               '$global-error', $global-error;
-  text-color--sale:                '$wf-sale', $wf-sale;
-  text-color--alert:               '$wf-tertiary', $wf-tertiary;
-  text-color--accent:              '$wf-tertiary', $wf-tertiary;
-  text-color--shipping:            '$wf-shipping', $wf-shipping;
-  text-color--disabled:            '$global-black-tint--2', $global-black-tint--2;
+  text-color--success:             '$wf-secondary'_$wf-secondary;
+  text-color--error:               '$global-error'_$global-error;
+  text-color--sale:                '$wf-sale'_$wf-sale;
+  text-color--alert:               '$wf-tertiary'_$wf-tertiary;
+  text-color--accent:              '$wf-tertiary'_$wf-tertiary;
+  text-color--shipping:            '$wf-shipping'_$wf-shipping;
+  text-color--disabled:            '$global-black-tint--2'_$global-black-tint--2;
 
-  text-color--white:               '$global-white', $global-white;
-  text-color--black:               '$global-black', $global-black;
+  text-color--white:               '$global-white'_$global-white;
+  text-color--black:               '$global-black'_$global-black;
 
   /// Background Colors
-  bg-color--global-body:           '$wf-background', $wf-background;
-  bg-color--global-body--tint:     '$wf-backgroundTint', $wf-backgroundTint;
-  bg-color--global-body--shade:    '$wf-backgroundShade', $wf-backgroundShade;
-  bg-color--primary:               '$wf-primary', $wf-primary;
-  bg-color--primary--hover:        '$wf-primaryHover', $wf-primaryHover;
-  bg-color--secondary:             '$wf-secondary', $wf-secondary;
-  bg-color--secondary--hover:      '$wf-tertiary', $wf-tertiary;
-  bg-color--tertiary:              '$wf-primaryTint3', $wf-primaryTint3;
-  bg-color--quaternary:            '$wf-secondary', $wf-secondary;
+  bg-color--global-body:           '$wf-background'_$wf-background;
+  bg-color--global-body--tint:     '$wf-backgroundTint'_$wf-backgroundTint;
+  bg-color--global-body--shade:    '$wf-backgroundShade'_$wf-backgroundShade;
+  bg-color--primary:               '$wf-primary'_$wf-primary;
+  bg-color--primary--hover:        '$wf-primaryHover'_$wf-primaryHover;
+  bg-color--secondary:             '$wf-secondary'_$wf-secondary;
+  bg-color--secondary--hover:      '$wf-tertiary'_$wf-tertiary;
+  bg-color--tertiary:              '$wf-primaryTint3'_$wf-primaryTint3;
+  bg-color--quaternary:            '$wf-secondary'_$wf-secondary;
 
-  bg-color--cool:                  '$wf-backgroundTint', $wf-backgroundTint;
-  bg-color--warm:                  '$wf-backgroundTint', $wf-backgroundTint;
-  bg-color--white:                 '$global-white', $global-white;
-  bg-color--lighter-grey:          '$wf-background', $wf-background;
-  bg-color--light-grey:            '$global-black-tint--3', $global-black-tint--3;
-  bg-color--light-medium-grey:     '$global-black-tint--2', $global-black-tint--2;
-  bg-color--medium-grey:           '$global-black-tint--1', $global-black-tint--1;
-  bg-color--dark-grey:             '$global-black', $global-black;
-  bg-color--black:                 '$global-black', $global-black;
+  bg-color--cool:                  '$wf-backgroundTint'_$wf-backgroundTint;
+  bg-color--warm:                  '$wf-backgroundTint'_$wf-backgroundTint;
+  bg-color--white:                 '$global-white'_$global-white;
+  bg-color--lighter-grey:          '$wf-background'_$wf-background;
+  bg-color--light-grey:            '$global-black-tint--3'_$global-black-tint--3;
+  bg-color--light-medium-grey:     '$global-black-tint--2'_$global-black-tint--2;
+  bg-color--medium-grey:           '$global-black-tint--1'_$global-black-tint--1;
+  bg-color--dark-grey:             '$global-black'_$global-black;
+  bg-color--black:                 '$global-black'_$global-black;
 
-  bg-color--success:               '$wf-secondary', $wf-secondary;
-  bg-color--error:                 '$global-error', $global-error;
-  bg-color--sale:                  '$wf-sale', $wf-sale;
-  bg-color--alert:                 '$wf-tertiary', $wf-tertiary;
-  bg-color--accent:                '$wf-tertiary', $wf-tertiary;
-  bg-color--shipping:              'null', null;
+  bg-color--success:               '$wf-secondary'_$wf-secondary;
+  bg-color--error:                 '$global-error'_$global-error;
+  bg-color--sale:                  '$wf-sale'_$wf-sale;
+  bg-color--alert:                 '$wf-tertiary'_$wf-tertiary;
+  bg-color--accent:                '$wf-tertiary'_$wf-tertiary;
+  bg-color--shipping:              'null'_null;
 
   /// Border Colors
-  border-color--global-body:       '$wf-background', $wf-background;
-  border-color--global-body--tint: '$wf-backgroundTint', $wf-backgroundTint;
-  border-color--base:              '$global-black-tint--3', $global-black-tint--3;
-  border-color--primary:           '$wf-primary', $wf-primary;
-  border-color--secondary:         '$wf-primaryTint3', $wf-primaryTint3;
-  border-color--tertiary:          '$global-black', $global-black;
-  border-color--quaternary:        '$wf-secondary', $wf-secondary;
-  border-color--black:             '$global-black', $global-black;
+  border-color--global-body:       '$wf-background'_$wf-background;
+  border-color--global-body--tint: '$wf-backgroundTint'_$wf-backgroundTint;
+  border-color--base:              '$global-black-tint--3'_$global-black-tint--3;
+  border-color--primary:           '$wf-primary'_$wf-primary;
+  border-color--secondary:         '$wf-primaryTint3'_$wf-primaryTint3;
+  border-color--tertiary:          '$global-black'_$global-black;
+  border-color--quaternary:        '$wf-secondary'_$wf-secondary;
+  border-color--black:             '$global-black'_$global-black;
 
-  border-color--cool:              '$wf-backgroundTint', $wf-backgroundTint;
-  border-color--warm:              '$wf-backgroundTint', $wf-backgroundTint;
-  border-color--white:             '$global-white', $global-white;
-  border-color--lighter-grey:      '$wf-background', $wf-background;
-  border-color--light-medium-grey: '$global-black-tint--2', $global-black-tint--2;
-  border-color--medium-grey:       '$global-black-tint--1', $global-black-tint--1;
-  border-color--dark-medium-grey:  '$global-black-tint--2', $global-black-tint--2;
+  border-color--cool:              '$wf-backgroundTint'_$wf-backgroundTint;
+  border-color--warm:              '$wf-backgroundTint'_$wf-backgroundTint;
+  border-color--white:             '$global-white'_$global-white;
+  border-color--lighter-grey:      '$wf-background'_$wf-background;
+  border-color--light-medium-grey: '$global-black-tint--2'_$global-black-tint--2;
+  border-color--medium-grey:       '$global-black-tint--1'_$global-black-tint--1;
+  border-color--dark-medium-grey:  '$global-black-tint--2'_$global-black-tint--2;
 
-  border-color--success:           '$wf-secondary', $wf-secondary;
-  border-color--error:             '$global-error', $global-error;
-  border-color--sale:              '$wf-sale', $wf-sale;
-  border-color--alert:             '$wf-tertiary', $wf-tertiary;
-  border-color--accent:            '$wf-tertiary', $wf-tertiary;
+  border-color--success:           '$wf-secondary'_$wf-secondary;
+  border-color--error:             '$global-error'_$global-error;
+  border-color--sale:              '$wf-sale'_$wf-sale;
+  border-color--alert:             '$wf-tertiary'_$wf-tertiary;
+  border-color--accent:            '$wf-tertiary'_$wf-tertiary;
 
   /// Box Shadow
-  boxShadow-color:                 '$global-black-tint--1', $global-black-tint--1;
+  boxShadow-color:                 '$global-black-tint--1'_$global-black-tint--1;
 
-  bg-color-shape--primary:         '$wf-secondary', $wf-secondary;
+  bg-color-shape--primary:         '$wf-secondary'_$wf-secondary;
 
   /// Buttons
-  bg-color-button--primary:        '$wf-primary', $wf-primary;
-  bg-color-button--primary--hover: '$wf-primaryHover', $wf-primaryHover;
+  bg-color-button--primary:        '$wf-primary'_$wf-primary;
+  bg-color-button--primary--hover: '$wf-primaryHover'_$wf-primaryHover;
 
-  bg-color-button--secondary:        '$wf-secondary', $wf-secondary;
-  bg-color-button--secondary--hover: '$wf-secondaryHover', $wf-secondaryHover;
+  bg-color-button--secondary:        '$wf-secondary'_$wf-secondary;
+  bg-color-button--secondary--hover: '$wf-secondaryHover'_$wf-secondaryHover;
 
   // Veils
-  veil-color--base: '$wf-veil', $wf-veil;
+  veil-color--base: '$wf-veil'_$wf-veil;
 }

@@ -15,8 +15,8 @@ $jm-primaryTint1:                 #e4a4b0;
 $jm-primaryTint2:                 #f1d1d7;
 $jm-primaryTint3:                 #faf0f2;
 
-$jm-veil:                         rgba($global-black, .5);
-$jm-boxShadow:                    rgba($global-black, .35);
+$jm-veil:                         rgba(34, 25, 36, .5); // rgba($global-black, .5);
+$jm-boxShadow:                    rgba(34, 25, 36, .35); // rgba($global-black, .35);
 
 ////
 /// Functional Variables - USE THESE
@@ -119,97 +119,97 @@ $veil-color--base: $jm-veil;
 
 :export {
   /// Tints
-  black-tint--1:                   '$global-black-tint--1', $global-black-tint--1;
-  black-tint--2:                   '$global-black-tint--2', $global-black-tint--2;
-  black-tint--3:                   '$global-black-tint--3', $global-black-tint--3;
-  primary-tint--1:                 '$jm-primaryTint1', $jm-primaryTint1;
-  primary-tint--2:                 '$jm-primaryTint2', $jm-primaryTint2;
-  primary-tint--3:                 '$jm-primaryTint3', $jm-primaryTint3;
+  black-tint--1:                   '$global-black-tint--1'_$global-black-tint--1;
+  black-tint--2:                   '$global-black-tint--2'_$global-black-tint--2;
+  black-tint--3:                   '$global-black-tint--3'_$global-black-tint--3;
+  primary-tint--1:                 '$jm-primaryTint1'_$jm-primaryTint1;
+  primary-tint--2:                 '$jm-primaryTint2'_$jm-primaryTint2;
+  primary-tint--3:                 '$jm-primaryTint3'_$jm-primaryTint3;
 
   /// Text Colors
-  text-color--base:                '$global-black', $global-black;
-  text-color--light:               '$global-black-tint--1', $global-black-tint--1;
-  text-color--extralight:          '$global-black-tint--2', $global-black-tint--2;
-  text-color--primary:             '$jm-primary', $jm-primary;
-  text-color--primary--hover:      '$jm-primary', $jm-primary;
-  text-color--secondary:           '$jm-secondary', $jm-secondary;
-  text-color--tertiary:            '$jm-tertiary', $jm-tertiary;
+  text-color--base:                '$global-black'_$global-black;
+  text-color--light:               '$global-black-tint--1'_$global-black-tint--1;
+  text-color--extralight:          '$global-black-tint--2'_$global-black-tint--2;
+  text-color--primary:             '$jm-primary'_$jm-primary;
+  text-color--primary--hover:      '$jm-primary'_$jm-primary;
+  text-color--secondary:           '$jm-secondary'_$jm-secondary;
+  text-color--tertiary:            '$jm-tertiary'_$jm-tertiary;
 
-  text-color--success:             '$jm-primary', $jm-primary;
-  text-color--error:               '$global-error', $global-error;
-  text-color--sale:                '$jm-sale', $jm-sale;
-  text-color--alert:               'null', null;
-  text-color--accent:              '$jm-secondary', $jm-secondary;
-  text-color--shipping:            '$jm-shipping', $jm-shipping;
-  text-color--disabled:            '$global-black-tint--3', $global-black-tint--3;
+  text-color--success:             '$jm-primary'_$jm-primary;
+  text-color--error:               '$global-error'_$global-error;
+  text-color--sale:                '$jm-sale'_$jm-sale;
+  text-color--alert:               'null'_null;
+  text-color--accent:              '$jm-secondary'_$jm-secondary;
+  text-color--shipping:            '$jm-shipping'_$jm-shipping;
+  text-color--disabled:            '$global-black-tint--3'_$global-black-tint--3;
 
-  text-color--white:               '$global-white', $global-white;
-  text-color--black:               '$global-black', $global-black;
+  text-color--white:               '$global-white'_$global-white;
+  text-color--black:               '$global-black'_$global-black;
 
   /// Background Colors
-  bg-color--global-body:           '$jm-background', $jm-background;
-  bg-color--global-body--tint:     '$jm-backgroundTint', $jm-backgroundTint;
-  bg-color--global-body--shade:    '$jm-backgroundShade', $jm-backgroundShade;
-  bg-color--primary:               '$jm-primary', $jm-primary;
-  bg-color--primary--hover:        '$jm-primary', $jm-primary;
-  bg-color--secondary:             '$jm-secondary', $jm-secondary;
-  bg-color--secondary--hover:      'null', null;
-  bg-color--tertiary:              '$jm-tertiary', $jm-tertiary;
-  bg-color--quaternary:            '$jm-primary', $jm-primary;
+  bg-color--global-body:           '$jm-background'_$jm-background;
+  bg-color--global-body--tint:     '$jm-backgroundTint'_$jm-backgroundTint;
+  bg-color--global-body--shade:    '$jm-backgroundShade'_$jm-backgroundShade;
+  bg-color--primary:               '$jm-primary'_$jm-primary;
+  bg-color--primary--hover:        '$jm-primary'_$jm-primary;
+  bg-color--secondary:             '$jm-secondary'_$jm-secondary;
+  bg-color--secondary--hover:      'null'_null;
+  bg-color--tertiary:              '$jm-tertiary'_$jm-tertiary;
+  bg-color--quaternary:            '$jm-primary'_$jm-primary;
 
-  bg-color--cool:                  '$jm-background', $jm-background;
-  bg-color--warm:                  '$jm-background', $jm-background;
-  bg-color--white:                 '$global-white', $global-white;
-  bg-color--lighter-grey:          '$jm-backgroundTint', $jm-backgroundTint;
-  bg-color--light-grey:            '$jm-background', $jm-background;
-  bg-color--light-medium-grey:     '$global-black-tint--3', $global-black-tint--3;
-  bg-color--medium-grey:           '$global-black-tint--1', $global-black-tint--1;
-  bg-color--dark-grey:             '$global-black', $global-black;
-  bg-color--black:                 '$global-black', $global-black;
+  bg-color--cool:                  '$jm-background'_$jm-background;
+  bg-color--warm:                  '$jm-background'_$jm-background;
+  bg-color--white:                 '$global-white'_$global-white;
+  bg-color--lighter-grey:          '$jm-backgroundTint'_$jm-backgroundTint;
+  bg-color--light-grey:            '$jm-background'_$jm-background;
+  bg-color--light-medium-grey:     '$global-black-tint--3'_$global-black-tint--3;
+  bg-color--medium-grey:           '$global-black-tint--1'_$global-black-tint--1;
+  bg-color--dark-grey:             '$global-black'_$global-black;
+  bg-color--black:                 '$global-black'_$global-black;
 
-  bg-color--success:               '$primary-tint--3', $primary-tint--3;
-  bg-color--error:                 '$global-error', $global-error;
-  bg-color--sale:                  '$jm-sale', $jm-sale;
-  bg-color--alert:                 'null', null;
-  bg-color--accent:                '$primary-tint--3', $primary-tint--3;
-  bg-color--shipping:              '$jm-tertiary', $jm-tertiary;
+  bg-color--success:               '$primary-tint--3'_$primary-tint--3;
+  bg-color--error:                 '$global-error'_$global-error;
+  bg-color--sale:                  '$jm-sale'_$jm-sale;
+  bg-color--alert:                 'null'_null;
+  bg-color--accent:                '$primary-tint--3'_$primary-tint--3;
+  bg-color--shipping:              '$jm-tertiary'_$jm-tertiary;
 
   /// Border Colors
-  border-color--global-body:       '$jm-background', $jm-background;
-  border-color--global-body--tint: '$jm-backgroundTint', $jm-backgroundTint;
-  border-color--base:              '$global-black-tint--3', $global-black-tint--3;
-  border-color--primary:           '$jm-primary', $jm-primary;
-  border-color--secondary:         '$jm-secondary', $jm-secondary;
-  border-color--tertiary:          '$global-black-tint--2', $global-black-tint--2;
-  border-color--quaternary:        '$jm-primary', $jm-primary;
-  border-color--black:             '$global-black', $global-black;
+  border-color--global-body:       '$jm-background'_$jm-background;
+  border-color--global-body--tint: '$jm-backgroundTint'_$jm-backgroundTint;
+  border-color--base:              '$global-black-tint--3'_$global-black-tint--3;
+  border-color--primary:           '$jm-primary'_$jm-primary;
+  border-color--secondary:         '$jm-secondary'_$jm-secondary;
+  border-color--tertiary:          '$global-black-tint--2'_$global-black-tint--2;
+  border-color--quaternary:        '$jm-primary'_$jm-primary;
+  border-color--black:             '$global-black'_$global-black;
 
-  border-color--cool:              '$jm-primaryTint3', $jm-primaryTint3;
-  border-color--warm:              '$jm-primary', $jm-primary;
-  border-color--white:             '$global-white', $global-white;
-  border-color--lighter-grey:      '$jm-backgroundTint', $jm-backgroundTint;
-  border-color--light-medium-grey: '$global-black-tint--3', $global-black-tint--3;
-  border-color--medium-grey:       '$global-black-tint--1', $global-black-tint--1;
-  border-color--dark-medium-grey:  '$global-black-tint--2', $global-black-tint--2;
+  border-color--cool:              '$jm-primaryTint3'_$jm-primaryTint3;
+  border-color--warm:              '$jm-primary'_$jm-primary;
+  border-color--white:             '$global-white'_$global-white;
+  border-color--lighter-grey:      '$jm-backgroundTint'_$jm-backgroundTint;
+  border-color--light-medium-grey: '$global-black-tint--3'_$global-black-tint--3;
+  border-color--medium-grey:       '$global-black-tint--1'_$global-black-tint--1;
+  border-color--dark-medium-grey:  '$global-black-tint--2'_$global-black-tint--2;
 
-  border-color--success:           '$primary-tint--1', $primary-tint--1;
-  border-color--error:             '$global-error', $global-error;
-  border-color--sale:              '$jm-sale', $jm-sale;
-  border-color--alert:             'null', null;
-  border-color--accent:            '$jm-tertiary', $jm-tertiary;
+  border-color--success:           '$primary-tint--1'_$primary-tint--1;
+  border-color--error:             '$global-error'_$global-error;
+  border-color--sale:              '$jm-sale'_$jm-sale;
+  border-color--alert:             'null'_null;
+  border-color--accent:            '$jm-tertiary'_$jm-tertiary;
 
   /// Box Shadow
-  boxShadow-color:                 '$jm-boxShadow', $jm-boxShadow;
+  boxShadow-color:                 '$jm-boxShadow'_$jm-boxShadow;
 
-  bg-color-shape--primary:         '$primary-tint--3', $primary-tint--3;
+  bg-color-shape--primary:         '$primary-tint--3'_$primary-tint--3;
 
   /// Buttons
-  bg-color-button--primary:          '$jm-secondary', $jm-secondary;
-  bg-color-button--primary--hover:   '$jm-primary', $jm-primary;
+  bg-color-button--primary:          '$jm-secondary'_$jm-secondary;
+  bg-color-button--primary--hover:   '$jm-primary'_$jm-primary;
 
-  bg-color-button--secondary:        '$jm-secondary', $jm-secondary;
-  bg-color-button--secondary--hover: '$jm-primary', $jm-primary;
+  bg-color-button--secondary:        '$jm-secondary'_$jm-secondary;
+  bg-color-button--secondary--hover: '$jm-primary'_$jm-primary;
 
   // Veils
-  veil-color--base: '$jm-veil', $jm-veil;
+  veil-color--base: '$jm-veil'_$jm-veil;
 }
