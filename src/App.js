@@ -70,6 +70,7 @@ const FilterInput = styled.input`
   font-size: 0.75rem;
 `;
 const Wrapper = styled.div`
+  padding: 0 10px;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(6, 1fr);
@@ -92,6 +93,34 @@ const getBrandName = brand => {
       return "Wayfair";
   }
 };
+// Credit David Walsh (https://davidwalsh.name/javascript-debounce-function)
+
+// Returns a function, that, as long as it continues to be invoked, will not
+// be triggered. The function will be called after it stops being called for
+// N milliseconds. If `immediate` is passed, trigger the function on the
+// leading edge, instead of the trailing.
+function debounce(func, wait, immediate) {
+  var timeout;
+
+  return function executedFunction() {
+    var context = this;
+    var args = arguments;
+
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    var callNow = immediate && !timeout;
+
+    clearTimeout(timeout);
+
+    timeout = setTimeout(later, wait);
+
+    if (callNow) func.apply(context, args);
+  };
+}
+
 let allBrandColors = {};
 for (var i in brands) {
   let brand = brands[i];
@@ -116,8 +145,7 @@ const FilterBlock = props => {
 };
 
 const ColorGrid = props => {
-  const { filterKeyword, filterResults, colors } = props;
-  console.log(colors);
+  const { query, filter, colors } = props;
   return (
     <>
       {brands.map((brand, i) => (
@@ -126,14 +154,16 @@ const ColorGrid = props => {
             <>
               {i === 0 && (
                 <Column>
-                  <FilterBlock query={filterKeyword} filter={filterResults} />
-                  {colors[brand].map((color, i) => {
-                    return (
-                      <RowLabel key={i}>
-                        <span>${color[0]}</span>
-                      </RowLabel>
-                    );
-                  })}
+                  <FilterBlock query={query} filter={filter} />
+                  {colors[brand].map((color, i) => (
+                    <Fragment key={i}>
+                      {color[0].includes(query) && (
+                        <RowLabel>
+                          <span>${color[0]}</span>
+                        </RowLabel>
+                      )}
+                    </Fragment>
+                  ))}
                 </Column>
               )}
               <Column key={i}>
@@ -141,16 +171,19 @@ const ColorGrid = props => {
                 {colors[brand].map((color, i) => {
                   let array = color[1].split(", ", 2);
                   return (
-                    <ColorBlock
-                      key={i}
-                      style={{ background: array[1], color: "white" }}
-                    >
-                      <p>
-                        {array[0].replace(/"/g, "").replace(/'/g, "")}
-                        <br />
-                        {array[1]}
-                      </p>
-                    </ColorBlock>
+                    <Fragment key={i}>
+                      {color[0].includes(query) && (
+                        <ColorBlock
+                          style={{ background: array[1], color: "white" }}
+                        >
+                          <p>
+                            {array[0].replace(/"/g, "").replace(/'/g, "")}
+                            <br />
+                            {array[1]}
+                          </p>
+                        </ColorBlock>
+                      )}
+                    </Fragment>
                   );
                 })}
               </Column>
@@ -166,7 +199,7 @@ const App = () => {
   const [filterKeyword, setFilterKeyword] = useState("");
   const filterResults = e => {
     let query = e.target.value;
-    setFilterKeyword(query);
+    debounce(setFilterKeyword(query), 500);
   };
   useEffect(() => {
     setColorData(allBrandColors);
