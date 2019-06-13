@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0777aafe906f2ef32c589c385c4b1a33",
+    "revision": "06db8065ef724b33fee2e521184438ef",
     "url": "/upgraded-potato/index.html"
   },
   {
-    "revision": "05f74a042330de3b4dc1",
+    "revision": "3c2e7c5451b5d4406c88",
     "url": "/upgraded-potato/static/css/main.81d97dca.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/upgraded-potato/static/js/2.75637bf9.chunk.js"
   },
   {
-    "revision": "05f74a042330de3b4dc1",
-    "url": "/upgraded-potato/static/js/main.9bfe4db5.chunk.js"
+    "revision": "3c2e7c5451b5d4406c88",
+    "url": "/upgraded-potato/static/js/main.071878a7.chunk.js"
   },
   {
     "revision": "59497d7c366bb0c2aadc",
