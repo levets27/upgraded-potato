@@ -68,6 +68,7 @@ const FilterInput = styled.input`
   border-radius: 3px;
   border: 2px solid #7f187f;
   font-size: 0.75rem;
+  width: 100%;
 `;
 const Wrapper = styled.div`
   padding: 0 10px;
@@ -80,17 +81,17 @@ const brands = ["wf", "am", "bl", "jm", "pg"];
 const getBrandName = brand => {
   switch (brand) {
     case "wf":
-      return "Wayfair";
+      return "BL";
     case "am":
-      return "AllModern";
+      return "AM";
     case "bl":
-      return "Birch Lane";
+      return "BL";
     case "jm":
-      return "Joss & Main";
+      return "JM";
     case "pg":
-      return "Perigold";
+      return "PG";
     default:
-      return "Wayfair";
+      return "WF";
   }
 };
 // Credit David Walsh (https://davidwalsh.name/javascript-debounce-function)
@@ -167,7 +168,7 @@ const ColorGrid = props => {
                 </Column>
               )}
               <Column key={i}>
-                <Heading>{getBrandName(brand)}</Heading>
+                <Heading>{brand.toUpperCase()}</Heading>
                 {colors[brand].map((color, i) => {
                   let array = color[1].split(", ", 2);
                   return (
