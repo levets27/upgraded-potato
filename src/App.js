@@ -78,6 +78,7 @@ const Wrapper = styled.div`
 `;
 
 const brands = ["wf", "am", "bl", "jm", "pg"];
+
 // Credit David Walsh (https://davidwalsh.name/javascript-debounce-function)
 
 // Returns a function, that, as long as it continues to be invoked, will not
@@ -86,22 +87,16 @@ const brands = ["wf", "am", "bl", "jm", "pg"];
 // leading edge, instead of the trailing.
 function debounce(func, wait, immediate) {
   var timeout;
-
   return function executedFunction() {
     var context = this;
     var args = arguments;
-
     var later = function() {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
-
     var callNow = immediate && !timeout;
-
     clearTimeout(timeout);
-
     timeout = setTimeout(later, wait);
-
     if (callNow) func.apply(context, args);
   };
 }
@@ -110,7 +105,6 @@ let allBrandColors = {};
 for (var i in brands) {
   let brand = brands[i];
   let variables = Object.entries(require(`./scss/_${brand}.scss`));
-
   allBrandColors[brand] = variables;
 }
 
