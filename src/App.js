@@ -1,110 +1,186 @@
-import React from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import styled from "styled-components";
 import "./App.css";
 
-function App() {
-  const brands = ["wf", "am", "bl", "jm", "pg"];
-  const getBrandName = brand => {
-    switch (brand) {
-      case "wf":
-        return "Wayfair";
-      case "am":
-        return "AllModern";
-      case "bl":
-        return "Birch Lane";
-      case "jm":
-        return "Joss & Main";
-      case "pg":
-        return "Perigold";
-      default:
-        return "Wayfair";
-    }
-  };
-  const Wrapper = styled.div`
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(6, 1fr);
-  `;
-  const Column = styled.div`
-    display: grid;
-    grid-gap: 10px;
-  `;
-  const Heading = styled.h2`
-    position: sticky;
-    top: 0;
+const Column = styled.div`
+  display: grid;
+  grid-gap: 10px;
+`;
+const Heading = styled.h2`
+  position: sticky;
+  top: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 50px;
+  padding: 10px 0;
+  background: #fff;
+  z-index: 1;
+  border-bottom: 3px solid #000;
+  margin: 0 -5px;
+`;
+const RowLabel = styled.h3`
+  display: flex;
+  height: 100px;
+  span {
+    margin: auto;
     text-align: center;
-    font-size: 1.5rem;
-    height: 50px;
-    padding-top: 10px;
-    background: #fff;
-    z-index: 1;
-    border-bottom: 2px solid #000;
-    margin: 0 -5px;
-  `;
-  const RowLabel = styled.h3`
-    display: flex;
-    height: 100px;
-    span {
-      margin: auto;
-      text-align: center;
-    }
-  `;
-  const ColorBlock = styled.div`
-    position: relative;
-    border: 1px solid darkgray;
-    border-radius: 5px;
-    height: 100px;
-    p {
-      font-size: 0.75rem;
-      padding: 5px;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      color: white;
-      background: rgba(0, 0, 0, 0.7);
-      text-align: center;
-    }
-  `;
+  }
+`;
+const ColorBlock = styled.div`
+  position: relative;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  height: 100px;
+  p {
+    font-size: 0.75rem;
+    padding: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
+`;
+const FilterContainer = styled.label`
+  position: sticky;
+  top: 0;
+  text-align: center;
+  height: 50px;
+  padding: 5px 0;
+  background: #fff;
+  z-index: 1;
+  border-bottom: 3px solid #000;
+  margin: 0 -5px;
+`;
+const HiddenLabel = styled.span`
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+`;
+const FilterInput = styled.input`
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid #7f187f;
+  font-size: 0.75rem;
+`;
+const Wrapper = styled.div`
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+`;
+
+const brands = ["wf", "am", "bl", "jm", "pg"];
+const getBrandName = brand => {
+  switch (brand) {
+    case "wf":
+      return "Wayfair";
+    case "am":
+      return "AllModern";
+    case "bl":
+      return "Birch Lane";
+    case "jm":
+      return "Joss & Main";
+    case "pg":
+      return "Perigold";
+    default:
+      return "Wayfair";
+  }
+};
+let allBrandColors = {};
+for (var i in brands) {
+  let brand = brands[i];
+  let variables = Object.entries(require(`./scss/_${brand}.scss`));
+
+  allBrandColors[brand] = variables;
+}
+
+const FilterBlock = props => {
+  return (
+    <FilterContainer htmlFor="filter">
+      <HiddenLabel>Filter Results</HiddenLabel>
+      <FilterInput
+        name="filter"
+        type="text"
+        placeholder="Filter Results"
+        value={props.query}
+        onChange={props.filter}
+      />
+    </FilterContainer>
+  );
+};
+
+const ColorGrid = props => {
+  const { filterKeyword, filterResults, colors } = props;
+  console.log(colors);
+  return (
+    <>
+      {brands.map((brand, i) => (
+        <Fragment key={i}>
+          {colors[brand] !== undefined && (
+            <>
+              {i === 0 && (
+                <Column>
+                  <FilterBlock query={filterKeyword} filter={filterResults} />
+                  {colors[brand].map((color, i) => {
+                    return (
+                      <RowLabel key={i}>
+                        <span>${color[0]}</span>
+                      </RowLabel>
+                    );
+                  })}
+                </Column>
+              )}
+              <Column key={i}>
+                <Heading>{getBrandName(brand)}</Heading>
+                {colors[brand].map((color, i) => {
+                  let array = color[1].split(", ", 2);
+                  return (
+                    <ColorBlock
+                      key={i}
+                      style={{ background: array[1], color: "white" }}
+                    >
+                      <p>
+                        {array[0].replace(/"/g, "").replace(/'/g, "")}
+                        <br />
+                        {array[1]}
+                      </p>
+                    </ColorBlock>
+                  );
+                })}
+              </Column>
+            </>
+          )}
+        </Fragment>
+      ))}
+    </>
+  );
+};
+const App = () => {
+  const [colorData, setColorData] = useState({});
+  const [filterKeyword, setFilterKeyword] = useState("");
+  const filterResults = e => {
+    let query = e.target.value;
+    setFilterKeyword(query);
+  };
+  useEffect(() => {
+    setColorData(allBrandColors);
+  }, [colorData]);
+  // Functions and stuff
   return (
     <Wrapper>
-      {brands.map((brand, i) => {
-        let variables = Object.entries(require(`./scss/_${brand}.scss`));
-        // Wrap each element in a column
-        return (
-          <>
-            {i === 0 && (
-              <Column key={i}>
-                <Heading>Var Name</Heading>
-                {variables.map((color, i) => (
-                  <RowLabel key={i}>
-                    <span>${color[0]}</span>
-                  </RowLabel>
-                ))}
-              </Column>
-            )}
-            <Column key={i}>
-              <Heading>{getBrandName(brand)}</Heading>
-              {variables.map((color, i) => {
-                let array = color[1].split(", ", 2);
-                return (
-                  <ColorBlock
-                    key={i}
-                    style={{ background: array[1], color: "white" }}
-                  >
-                    <p>
-                      {array[0].replace(/"/g, "").replace(/'/g, "")}
-                      <br />
-                      {array[1]}
-                    </p>
-                  </ColorBlock>
-                );
-              })}
-            </Column>
-          </>
-        );
-      })}
+      <ColorGrid
+        colors={colorData}
+        query={filterKeyword}
+        filter={filterResults}
+      />
     </Wrapper>
   );
-}
+};
 
 export default App;
