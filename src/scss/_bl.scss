@@ -123,12 +123,12 @@ $veil-color--base:                $bl-veil;
 
 :export {
   /// Tints
-  black-tint--1:                   '$global-black-', $global-black-tint--1;
-  black-tint--2:                   '$global-black-', $global-black-tint--2;
-  black-tint--3:                   '$global-black-', $global-black-tint--3;
-  primary-tint--1:                 '$bl-primaryTin', $bl-primaryTint1;
-  primary-tint--2:                 '$bl-primaryTin', $bl-primaryTint2;
-  primary-tint--3:                 '$bl-primaryTin', $bl-primaryTint3;
+  black-tint--1:                   '$global-black--1', $global-black-tint--1;
+  black-tint--2:                   '$global-black--2', $global-black-tint--2;
+  black-tint--3:                   '$global-black--3', $global-black-tint--3;
+  primary-tint--1:                 '$bl-primaryTint1', $bl-primaryTint1;
+  primary-tint--2:                 '$bl-primaryTint2', $bl-primaryTint2;
+  primary-tint--3:                 '$bl-primaryTint3', $bl-primaryTint3;
 
   /// Text Colors
   text-color--base:                '$global-black', $global-black;
